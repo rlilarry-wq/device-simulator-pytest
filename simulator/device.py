@@ -12,7 +12,7 @@ class Device:
         self.state = DeviceState.IDLE
 
     def start(self):
-        if self.state != DeviceState.IDLE:            #if self.state != DeviceState.IDLE and self.state != DeviceState.PAUSED:
+        if self.state != DeviceState.IDLE:            # for old if self.state != DeviceState.IDLE and self.state != DeviceState.PAUSED:
             raise RuntimeError("Device cannot be started from current state")
         self.state = DeviceState.RUNNING
 
